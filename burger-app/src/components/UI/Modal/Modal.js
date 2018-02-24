@@ -9,7 +9,7 @@ class Modal extends Component{
     //checking to see if anything changed before calling this method
     shouldComponentUpdate(nextProps, nextState){
         //only returns true if show changes
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     componentWillUpdate(){
